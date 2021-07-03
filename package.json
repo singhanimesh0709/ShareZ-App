@@ -1,0 +1,19 @@
+{
+  "name": "sharez",
+  "version": "1.0.0",
+  "description": "It's a file sharing app, where people can download and upload files meanwhile share it also with other people on the internet. It even has the functionality of sending automated emails.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhanimesh0709/ShareZ-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhanimesh0709/ShareZ-App/issues"
+  },
+  "homepage": "https://github.com/singhanimesh0709/ShareZ-App#readme"
+}
