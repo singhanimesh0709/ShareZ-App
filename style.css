@@ -16,7 +16,7 @@ body{
     position:absolute;
     top:10px;
     left: 15px;
-    width:150px;
+    width:180px;
 }
 .image-vector{
     width:50vw;
@@ -79,13 +79,13 @@ z-index: 2;
     transform:scale(0.9);
 }
 
-.draggged .center{
+.dragged .center{
     transform: translateY(-5px);
 }
-.dragged.right{
+.dragged .right{
     transform:rotate(10deg) scale(0.9) translateX(20px);
 }
-.dragged.left{
+.dragged .left{
     transform:rotate(-10deg) scale(0.9) translateX(-20px);
 }
 .title{
