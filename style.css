@@ -1,0 +1,99 @@
+:root{
+    --main-bg-color:#edf5fe;
+    --light-blue:#03a9f4;
+    --border-color:#0288d147;
+    --container-width:500px;
+}
+
+body{
+    font-family: system-ui;
+    background:var(--main-bg-color);
+    height: 100vh;
+    overflow:hidden;
+}
+
+.logo{
+    position:absolute;
+    top:10px;
+    left: 15px;
+    width:150px;
+}
+.image-vector{
+    width:50vw;
+    height:50vh;
+    background:url(/ShareZ-App/file.svg)no-repeat centre;
+    background-size:contain;
+}
+
+body,.upload-container,.drop-zone{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.upload-container,.drop-zone{
+   flex-direction:column; 
+}
+
+.upload-container{
+    background: #ffffff;
+    border-radius:25px;
+    box-shadow: 0px 20px 20px 0px #00000017;
+}
+
+.drop-zone{
+    width: var(--container-width);
+    min-height: 200px;
+    border:2px dashed var(--border-color);
+    border-radius: 10px;
+    margin:30px;
+    transition:0.2s all ease-in;
+}
+
+.drop-zone.dragged{
+    background:var(--main-bg-color);
+    border-color:#0288d1 ;
+}
+.drop-zone input{
+    display:none;
+}
+
+.icon-container{
+    position:relative;
+    width:75px;
+    height: 100px;
+}
+
+.icon-container img{
+    width: 75px;
+    position: absolute;
+    transition: transform 0.25s ease-in-out;
+    transform-origin: bottom;
+}
+
+.icon-container .center{
+z-index: 2;
+}
+
+.icon-container .right, .icon-container .left{
+    filter:grayscale(0.5);
+    transform:scale(0.9);
+}
+
+.draggged .center{
+    transform: translateY(-5px);
+}
+.dragged.right{
+    transform:rotate(10deg) scale(0.9) translateX(20px);
+}
+.dragged.left{
+    transform:rotate(-10deg) scale(0.9) translateX(-20px);
+}
+.title{
+    font-size: large;
+    
+}
+
+#browseBtn{
+    color: #2196f3;
+    cursor: pointer;
+}
