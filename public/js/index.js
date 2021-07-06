@@ -1,7 +1,7 @@
 const dropZone = document.querySelector(".drop-zone");
 const fileInput = document.querySelector("#fileInput");
 const browseBtn = document.querySelector("#browseBtn");
-
+const bgProgress = document.querySelector(".bg-progress");
 // const baseURL = "file:///D:\VsVideos";
 // const uploadURL = `${baseURL}\files`;
 const baseURL = "http://localhost:3000";
@@ -47,7 +47,7 @@ dropZone.addEventListener("drop",(e)=>{
 
     fileInput.addEventListener("change",()=>{
         if(fileInput.files[0].size>maxAllowedSize){
-            showToast("Max file size is 200 mb");
+            //showToast("Max file size is 200 mb");
             fileInput.value = ""; // resetting the input value
             return;
         }
@@ -67,8 +67,12 @@ dropZone.addEventListener("drop",(e)=>{
            }
        };
 
+       xhr.upload.onprogress= updateProgress;
        xhr.open('POST',uploadURL);
        xhr.send(formData);
     }
 
-
+const updateProgress = (e)=>{
+    const percent = Math.round(e.loaded / e.total) *100;
+    bgProgress.style.width=`${percent}`;
+}

@@ -97,3 +97,27 @@ z-index: 2;
     color: #2196f3;
     cursor: pointer;
 }
+.progress-container{
+width: var(--container-width);
+height: 70px;
+border: 2px solid var(--main-bg-color);
+margin-bottom: 25px;
+border-radius:10px;
+position: relative;
+}
+
+.progress-container .bg-progress{
+    background:var(--main-bg-color);
+    border-radius:3%;
+    width: 0%;
+    height: 100%;
+   
+    transform-origin: left;
+    transition: width .25s linear;
+    position: absolute;
+}
+.progress-container .inner-container{
+position : absolute;
+z-index: 1;
+margin: 10px 15px;
+}
