@@ -4,7 +4,7 @@ const browseBtn = document.querySelector("#browseBtn");
 
 // const baseURL = "file:///D:\VsVideos";
 // const uploadURL = `${baseURL}\files`;
-const baseURL = "https://innshare.herokuapp.com";
+const baseURL = "http://localhost:3000";
 const uploadURL = `${baseURL}/api/files`;
 // const uploadURL = `${baseURL}\files`;
 
