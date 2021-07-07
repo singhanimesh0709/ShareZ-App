@@ -47,7 +47,7 @@ if(!req.file){
     size: req.file.size
   });
     
-  const response = await file.save();
+  const response = await file.save(); 
    res.json({file:`${process.env.APP_BASE_URL}/files/${response.uuid}`});
    //http://localhost:3000/files/13123414dmdlscl131312clmcscmlc 
 })
